@@ -27,6 +27,12 @@
             margin-bottom: 15px;
             color: #000000;
         }
+        .preview-img {
+            width: 600px;
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 25px;
+        }
         .description {
             margin-bottom: 30px;
             font-size: 1.1rem;
@@ -34,7 +40,7 @@
         .repo-link {
             background-color: #f9f9f9;
             padding: 15px;
-            border-left: 4px solid #0066cc;
+            border-left: 4px solid #555555; /* Темно-серая полоса */
             font-family: monospace;
             font-size: 1.1rem;
             margin-bottom: 30px;
@@ -43,10 +49,11 @@
             margin-bottom: 50px;
         }
         a {
-            color: #0066cc;
+            color: #555555; /* Темно-серый цвет ссылок */
             text-decoration: none;
         }
         a:hover {
+            color: #222222; /* Почти черный при наведении */
             text-decoration: underline;
         }
         .download-btn {
@@ -73,6 +80,9 @@
 
     <h1>ProxyTune</h1>
 
+    <!-- Картинка приложения -->
+    <img src="https://raw.githubusercontent.com/sobolevcode/sobolevcode.github.io/refs/heads/main/image/prew1.png" alt="Интерфейс ProxyTune" class="preview-img">
+
     <div class="description">
         <p>Это официальный релиз приложения ProxyTune для смарт-ТВ на базе LG webOS. Инструмент создан для того, чтобы вернуть вам свободный и комфортный доступ к любимым сервисам прямо на большом экране.</p>
         <p>Никакой сложной настройки пультом — всё управление происходит в один клик с вашего смартфона. Приложение поддерживает актуальные протоколы: VLESS, Trojan, Shadowsocks и SOCKS5.</p>
@@ -90,7 +100,6 @@
     <div class="footer">
         <p><strong>Сообщество и поддержка:</strong></p>
         <a href="https://t.me/sobolevcode" target="_blank">Канал SobolevCode</a>
-        <!-- Не забудь поменять ссылку ниже на реальную ссылку твоего чата -->
         <a href="https://t.me/твой_чат_обсуждений" target="_blank">Чат обсуждений</a>
     </div>
 
