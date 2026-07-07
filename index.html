@@ -40,27 +40,42 @@
         .repo-link {
             background-color: #f9f9f9;
             padding: 15px;
-            border-left: 4px solid #555555; /* Темно-серая полоса */
+            border-left: 4px solid #555555;
             font-family: monospace;
             font-size: 1.1rem;
             margin-bottom: 30px;
+            word-break: break-all; /* Защита от вылезания ссылки на смартфонах */
         }
         .links {
             margin-bottom: 50px;
         }
         a {
-            color: #555555; /* Темно-серый цвет ссылок */
+            color: #555555;
             text-decoration: none;
         }
         a:hover {
-            color: #222222; /* Почти черный при наведении */
+            color: #222222;
             text-decoration: underline;
         }
+        
+        /* Стили для овальной кнопки скачивания */
         .download-btn {
             display: inline-block;
+            background-color: #555555; /* Темно-серый фон */
+            color: #ffffff; /* Белый текст */
             font-weight: bold;
             font-size: 1.1rem;
+            padding: 12px 32px; /* Отступы для создания формы */
+            border-radius: 50px; /* Сильное скругление для овала */
+            text-align: center;
+            transition: background-color 0.2s ease;
         }
+        .download-btn:hover {
+            background-color: #333333; /* Чуть темнее при наведении */
+            color: #ffffff; /* Текст остается белым */
+            text-decoration: none; /* Убираем подчеркивание */
+        }
+
         .footer {
             border-top: 1px solid #eeeeee;
             padding-top: 20px;
@@ -69,6 +84,30 @@
         .footer a {
             margin-right: 20px;
             font-weight: bold;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        /* Адаптация под мобильные устройства */
+        @media (max-width: 600px) {
+            body {
+                padding: 20px 15px; /* Уменьшаем боковые отступы */
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .download-btn {
+                display: block; /* Растягиваем кнопку на всю ширину экрана */
+                width: 100%;
+                box-sizing: border-box;
+            }
+            .footer {
+                display: flex;
+                flex-direction: column; /* Ставим ссылки друг под другом */
+            }
+            .footer a {
+                margin-right: 0;
+            }
         }
     </style>
 </head>
