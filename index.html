@@ -3,21 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProxyTune - SobolevCode</title>
+    <title>ProxyTune v1.1.0 — Клиент для LG webOS</title>
 
     <!-- Настройки превью для соцсетей и мессенджеров (Open Graph) -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sobolevcode.github.io/">
-    <meta property="og:title" content="ProxyTune — клиент для LG webOS">
-    <meta property="og:description" content="Официальный релиз! Снова смотрите YouTube и любимые сервисы на ТВ.
-Настройка за секунды — отправьте ссылку со смартфона.">
+    <meta property="og:title" content="ProxyTune v1.1.0 — Универсальный VPN для LG webOS">
+    <meta property="og:description" content="Официальный релиз v1.1.0! Полная поддержка подписок (Marzban, X-UI), интерактивное меню серверов и улучшенная стабильность.">
     <meta property="og:image" content="https://raw.githubusercontent.com/sobolevcode/sobolevcode.github.io/refs/heads/main/image/prew1.png">
     
     <!-- Настройки превью для Twitter / X -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ProxyTune — клиент для LG webOS">
-    <meta name="twitter:description" content="Официальный релиз! Снова смотрите YouTube и любимые сервисы на ТВ.
-Настройка за секунды — отправьте ссылку со смартфона.">
+    <meta name="twitter:title" content="ProxyTune v1.1.0 — Универсальный VPN для LG webOS">
+    <meta name="twitter:description" content="Официальный релиз v1.1.0! Полная поддержка подписок (Marzban, X-UI), интерактивное меню серверов и улучшенная стабильность.">
     <meta name="twitter:image" content="https://raw.githubusercontent.com/sobolevcode/sobolevcode.github.io/refs/heads/main/image/prew1.png">
 
     <style>
@@ -43,11 +41,16 @@
             margin-bottom: 15px;
             color: #000000;
         }
+        h2 {
+            margin-top: 40px;
+        }
         .preview-img {
-            width: 600px;
-            max-width: 100%;
+            width: 100%;
+            max-width: 600px;
             height: auto;
             margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
         .description {
             margin-bottom: 30px;
@@ -74,7 +77,6 @@
             text-decoration: underline;
         }
         
-        /* Стили для овальной кнопки скачивания */
         .download-btn {
             display: inline-block;
             background-color: #555555;
@@ -104,54 +106,41 @@
             margin-bottom: 10px;
         }
 
-        /* Адаптация под мобильные устройства */
         @media (max-width: 600px) {
-            body {
-                padding: 20px 15px;
-            }
-            h1 {
-                font-size: 2rem;
-            }
-            .download-btn {
-                display: block;
-                width: 100%;
-                box-sizing: border-box;
-            }
-            .footer {
-                display: flex;
-                flex-direction: column;
-            }
-            .footer a {
-                margin-right: 0;
-            }
+            body { padding: 20px 15px; }
+            h1 { font-size: 2rem; }
+            .download-btn { display: block; width: 100%; box-sizing: border-box; }
         }
     </style>
 </head>
 <body>
 
-    <div class="header">
-        SobolevCode
-    </div>
+    <div class="header">SobolevCode</div>
 
-    <h1>ProxyTune</h1>
+    <h1>ProxyTune v1.1.0</h1>
 
-    <!-- Картинка приложения -->
     <img src="https://raw.githubusercontent.com/sobolevcode/sobolevcode.github.io/refs/heads/main/image/prew1.png" alt="Интерфейс ProxyTune" class="preview-img">
 
     <div class="description">
-        <p>Это официальный релиз приложения ProxyTune для смарт-ТВ на базе LG webOS. Инструмент создан для того, чтобы вернуть вам свободный и комфортный доступ к любимым сервисам прямо на большом экране.</p>
-        <p>Никакой сложной настройки пультом.
-        Всё управление — в один клик с вашего смартфона.
-        Приложение поддерживает актуальные протоколы: VLESS, Trojan, Shadowsocks и SOCKS5.
-        Как управлять:
-        Откройте в браузере на телефоне адрес, который показан на экране телевизора:
-        http://IP_ВАШЕГО_ТЕЛЕВИЗОРА:8888</p>
-        <p>Постарался сделать код максимально лёгким — приложение должно запускаться на версиях webOS 4.0+</p>
-        <p>К сожалению на версиях ниже webOS 4 чисто технически нельзя запустить приложение, отсутствует TUN модуль на старых телевизорах</p>
+        <p>ProxyTune — это универсальный VPN-клиент для LG webOS. Инструмент создан для быстрого и комфортного доступа к сети прямо на большом экране вашего телевизора.</p>
+        
+        <h3>Новое в версии 1.1.0:</h3>
+        <p>
+            • <b>Поддержка подписок:</b> Теперь приложение работает с Marzban, X-UI и другими популярными панелями. Забудьте о ручном вводе — загружайте списки серверов одной ссылкой.<br>
+            • <b>Интерактивное меню:</b> Выбирайте нужный сервер прямо со смартфона в один клик.<br>
+            • <b>Улучшенная стабильность:</b> Мы добавили защиту от «мусорных» ссылок и улучшили парсинг конфигураций.
+        </p>
+
+        <img src="https://raw.githubusercontent.com/sobolevcode/sobolevcode.github.io/refs/heads/main/image/listserver1.jpg" alt="Выбор серверов" class="preview-img">
+
+        <p><b>Как это работает:</b><br>
+        Никакой сложной настройки пультом. Просто введите IP-адрес телевизора в браузере смартфона (адрес отображается на экране ТВ) и отправьте ссылку-конфигурацию или подписку. Приложение поддерживает протоколы: VLESS, Trojan, Shadowsocks и SOCKS5.</p>
+
+        <p><small style="color: #777;">*Приложение поддерживается на версиях webOS 4.0+. На более старых ТВ использование невозможно из-за отсутствия модуля TUN.</small></p>
     </div>
 
     <div class="repo-link">
-        <strong>Ссылка для добавления в (кружку) Homebrew Channel:</strong><br><br>
+        <strong>Ссылка для Homebrew Channel:</strong><br><br>
         https://sobolevcode.github.io/repo.json
     </div>
 
