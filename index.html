@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProxyTune v1.4.0 — Клиент для LG webOS</title>
+    <title>ProxyTune v2.0.0 — Клиент для LG webOS</title>
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sobolevcode.github.io/">
-    <meta property="og:title" content="ProxyTune v1.4.0 — Универсальный VPN для LG webOS">
-    <meta property="og:description" content="Официальный релиз v1.4.0! Массовое добавление серверов, умный ручной пинг, стартовый экран проверки требований и премиальный UX.">
+    <meta property="og:title" content="ProxyTune v2.0.0 — Теперь на Xray Core!">
+    <meta property="og:description" content="Глобальное обновление: переход на движок Xray. Легче, быстрее, поддержка VLESS Reality и подписок с привязкой по HWID.">
     <meta property="og:image" content="https://raw.githubusercontent.com/sobolevcode/sobolevcode.github.io/refs/heads/main/image/prew1.png">
     
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ProxyTune v1.4.0 — Универсальный VPN для LG webOS">
-    <meta name="twitter:description" content="Официальный релиз v1.4.0! Массовое добавление серверов, умный ручной пинг, стартовый экран проверки требований и премиальный UX.">
+    <meta name="twitter:title" content="ProxyTune v2.0.0 — Теперь на Xray Core!">
+    <meta name="twitter:description" content="Глобальное обновление: переход на движок Xray. Легче, быстрее, поддержка VLESS Reality и подписок с привязкой по HWID.">
     <meta name="twitter:image" content="https://raw.githubusercontent.com/sobolevcode/sobolevcode.github.io/refs/heads/main/image/prew1.png">
 
     <style>
@@ -53,11 +53,11 @@
             margin-bottom: 30px;
             font-size: 1.1rem;
         }
-        .warning-box {
-            background-color: #fff3cd;
-            color: #856404;
+        .success-box {
+            background-color: #d1e7dd;
+            color: #0f5132;
             padding: 15px;
-            border-left: 4px solid #ffc107;
+            border-left: 4px solid #198754;
             border-radius: 0 8px 8px 0;
             margin: 20px 0;
             font-size: 1rem;
@@ -94,6 +94,9 @@
         }
         .links {
             margin-bottom: 50px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
         }
         a {
             color: #0066cc;
@@ -106,7 +109,7 @@
         
         .download-btn {
             display: inline-block;
-            background-color: #555555;
+            background-color: #333333;
             color: #ffffff !important;
             font-weight: bold;
             font-size: 1.1rem;
@@ -114,9 +117,31 @@
             border-radius: 50px;
             text-align: center;
             transition: background-color 0.2s ease;
+            flex: 1;
+            min-width: 250px;
         }
         .download-btn:hover {
-            background-color: #333333;
+            background-color: #111111;
+            text-decoration: none;
+        }
+        
+        .download-btn-old {
+            display: inline-block;
+            background-color: transparent;
+            color: #555555 !important;
+            font-weight: bold;
+            font-size: 1.1rem;
+            padding: 10px 32px;
+            border-radius: 50px;
+            border: 2px solid #cccccc;
+            text-align: center;
+            transition: all 0.2s ease;
+            flex: 1;
+            min-width: 250px;
+        }
+        .download-btn-old:hover {
+            border-color: #555555;
+            background-color: #f9f9f9;
             text-decoration: none;
         }
 
@@ -139,8 +164,9 @@
         @media (max-width: 600px) {
             body { padding: 20px 15px; }
             h1 { font-size: 2rem; }
-            .download-btn { display: block; width: 100%; box-sizing: border-box; }
-            .faq-box, .warning-box { padding: 15px; }
+            .links { flex-direction: column; }
+            .download-btn, .download-btn-old { display: block; width: 100%; box-sizing: border-box; }
+            .faq-box, .success-box { padding: 15px; }
         }
     </style>
 </head>
@@ -148,54 +174,49 @@
 
     <div class="header">SobolevCode</div>
 
-    <h1>ProxyTune v1.4.0</h1>
+    <h1>ProxyTune v2.0.0</h1>
 
     <img src="https://raw.githubusercontent.com/sobolevcode/sobolevcode.github.io/refs/heads/main/image/prew1.png" alt="Интерфейс ProxyTune" class="preview-img">
 
     <div class="description">
-        <p>ProxyTune — это универсальный VPN-клиент для LG webOS. Инструмент создан для быстрого и комфортного доступа к сети прямо на большом экране вашего телевизора.</p>
+        <p>Всем привет! Друзья, я выкатываю, пожалуй, самое масштабное и важное обновление с момента релиза ProxyTune. Мы полностью пересобрали приложение под капотом, чтобы сделать его еще быстрее, стабильнее и всеяднее. Встречайте версию 2.0.0!</p>
         
-        <h3>Что нового в версии 1.4.0:</h3>
+        <h3>🔥 Главное в версии 2.0.0:</h3>
         <p>
-            • <b>Массовое добавление серверов.</b> Вставьте несколько ссылок VLESS в веб-интерфейс, и ProxyTune сам их распарсит и аккуратно соберет в удобное окно выбора, удобно сделать с Happwner.<br>
-            <small style="color: #666;"><i>(Совет: добавляйте по 5–10 штук за раз, не нужно кидать по 50+ серверов, чтобы не перегружать слабую память телевизоров).</i></small>
-        </p>
-        <p>
-            • <b>Экран системных требований на ТВ.</b> При первом запуске он напомнит о необходимости Root-прав и webOS 4.0+.<br>
-            Узнать, доступен ли вам рут: <a href="https://cani.rootmy.tv/" target="_blank">https://cani.rootmy.tv/</a>
-        </p>
-        <p>
-            • <b>Инструмент извлечения ссылок через Happwner.</b> Если ваша подписка (например, от Happ) закрыта авторизацией и не импортируется напрямую, используйте утилиту Happwner на Android для извлечения чистых VLESS-ссылок.<br>
-            Подробности тут: <a href="https://t.me/sobolevcodechat/330/381" target="_blank">инструкция в Telegram</a>
+            • <b>Переход на ядро Xray Core.</b> Вы просили — я сделал. Мы отказались от тяжелого монолита <i>sing-box</i> в пользу легковесной связки Xray + tun2socks. Что это дало? Идеальную работу с gRPC, безотказную поддержку XTLS Reality и феноменальную экономию оперативной памяти телевизора.<br><br>
+            • <b>Поддержка приватных подписок (HWID).</b> Теперь приложение без проблем переваривает подписки от закрытых провайдеров (типа HAPP), которые используют жесткую привязку к вашему железу.<br><br>
+            • <b>Легче, чем когда-либо.</b> Несмотря на новый движок, сам установочный пакет <code>.ipk</code> стал весить меньше (всего 30 МБ вместо 36 МБ). Телевизор скажет вам спасибо!<br><br>
+            • <b>Больше никаких проблем с JSON.</b> Теперь вы можете смело вставлять «сырые» JSON-конфигурации Xray — приложение с ними отлично дружит.
         </p>
 
-        <div class="warning-box">
-            ⚠️ <b>Напомню:</b> у нас работает ядро sing-box, поэтому приложение не читает .json конфиги от Xray.
+        <div class="success-box">
+            ✅ <b>Бесшовное обновление:</b> Накатывайте новую версию прямо поверх старой! Ваша история, избранные серверы и закладка в браузере телефона на порту <i>:8888</i> останутся на месте.
         </div>
 
-        <p><b>Как это работает:</b><br>
-        Никакой сложной настройки пультом. Просто введите IP-адрес телевизора в браузере смартфона (адрес отображается на экране ТВ) и отправьте ссылку-конфигурацию, подписку или JSON-код. Приложение поддерживает протоколы: VLESS, Trojan, Shadowsocks и SOCKS5.</p>
+        <h3>Остались на месте и наши лучшие фишки:</h3>
+        <p>
+            • <b>Массовое добавление серверов.</b> Закидывайте пачку ссылок или подписку, и ProxyTune аккуратно соберет их в окно выбора.<br>
+            • <b>Умный ручной пинг.</b> Проверяйте отклик серверов точечно, не вешая процессор телевизора массовыми запросами.<br>
+            • <b>Экран системных требований.</b> Проверка Root-прав и версии webOS (4.0+) при старте на экране ТВ. Узнать, доступен ли вам рут, можно тут: <a href="https://cani.rootmy.tv/" target="_blank">cani.rootmy.tv</a>.
+        </p>
 
         <div class="faq-box">
-            <h4>Почему нет прямой загрузки подписок с авторизацией (как в HAPP)?</h4>
-            <p>Тут две причины — безопасность и жесткие технические ограничения самих телевизоров:</p>
-            <ul>
-                <li><b>Безопасность и логика:</b> Родное приложение HAPP работает внутри своей закрытой экосистемы.</li>
-                <li><b>Ограничения Node.js:</b> Телевизоры LG работают на очень старых версиях движка. Современная защита провайдеров (Cloudflare, куки, скрытые токены) требует тяжелых библиотек или эмуляции браузера. Попытка запустить такой парсер на ТВ просто повесит его память.</li>
-            </ul>
-            <p style="margin-bottom: 0;"><b>Поэтому самый изящный, легкий и стабильный путь:</b> поддержку чистого JSON. Вы просто авторизуетесь сами в браузере смартфона, копируете готовый конфиг и вставляете его в клиент. Никаких блокировок, нулевая нагрузка на телевизор и 100% стабильная работа!</p>
+            <h4>Почему нет автоматической авторизации в закрытых подписках?</h4>
+            <p>Чтобы не превращать телевизор в «тормозящий кирпич». Современная защита провайдеров от парсеров (Cloudflare, токены) требует эмуляции браузера, что повесит слабую память LG. Поэтому самый надежный и быстрый путь — скопировать готовый чистый JSON (или VLESS-ссылку) прямо из браузера смартфона или утилиты Happwner и вставить его в наш клиент. 100% результат и нулевая нагрузка на ТВ.</p>
         </div>
-
+        
         <p><small style="color: #777;">*Приложение поддерживается на версиях webOS 4.0+. На более старых ТВ использование невозможно из-за отсутствия модуля TUN.</small></p>
     </div>
 
     <div class="repo-link">
-        <strong>Ссылка для Homebrew Channel:</strong><br><br>
+        <strong>Установка в один клик через Homebrew Channel:</strong><br><br>
         https://sobolevcode.github.io/repo.json
     </div>
 
     <div class="links">
-        <a href="https://github.com/sobolevcode/sobolevcode.github.io/releases/download/v1.4.0/com.proxytune_1.4.0_all.ipk" class="download-btn">Скачать ProxyTune v1.4.0</a>
+        <a href="https://github.com/sobolevcode/sobolevcode.github.io/releases/download/v2.0.0/com.proxytune_2.0.0_all.ipk" class="download-btn">🔥 Скачать ProxyTune v2.0.0 (Xray)</a>
+        
+        <a href="https://github.com/sobolevcode/sobolevcode.github.io/releases/download/v1.4.0/com.proxytune_1.4.0_all.ipk" class="download-btn-old">Скачать v1.4.0 (Sing-box)</a>
     </div>
 
     <div class="footer">
